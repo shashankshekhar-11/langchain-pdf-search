@@ -17,7 +17,7 @@ if not GOOGLE_API_KEY:
     print("Error: GOOGLE_API_KEY not found in .env file. Get it from https://makersuite.google.com/app/apikey")
     exit(1)
 
-# Silently verify model availability
+#verify model availability
 try:
     genai.configure(api_key=GOOGLE_API_KEY)
     available_models = [m.name for m in genai.list_models()]
